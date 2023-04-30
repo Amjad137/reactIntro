@@ -1,0 +1,1 @@
+1. should initiate react >> npx create-react-app project-name
