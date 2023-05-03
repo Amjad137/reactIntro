@@ -1,23 +1,25 @@
-import logo from './logo.svg';
+import { useState } from 'react';
 import './App.css';
+import ClassComponent from './components/ClassComponent';
+import FunctionComponent from './components/FunctionComponent';
 
 function App() {
+  const author = "Husain";
+
+  const [name, setName] = useState("Amjad");
+  const [bkName, setBkName] =useState("Life of a Spy");
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+     
+       <p>Hey Welcome to the React Session</p>
+      
+      <h1>Class Component</h1>
+      <ClassComponent/>
+
+
+    <h1>This is Function Component</h1>
+    <FunctionComponent name={name} age={23} author={author} setName= {setName} bkName={bkName} setBkName={setBkName} />  {/*these are props */}
     </div>
   );
 }
